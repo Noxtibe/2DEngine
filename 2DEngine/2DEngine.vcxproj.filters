@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Games\Asteroid\Astroid.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Asteroid\Laser.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Asteroid\Ship.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Camera.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Game.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\IRenderer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\RendererSDL.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Timer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Window.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Utilitaire\Log.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Utilitaire\Random.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Maths\Maths.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Maths\Matrix4.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Maths\Quaternion.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Maths\Vector2.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Maths\Vector3.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Maths\VertexArray.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Controls\InputManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Controls\KeyboardState.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Controls\MouseState.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AssetsManager\Assets.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AssetsManager\Texture.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\Actor.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\BackgroundSpriteComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\CircleCollisionComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\Component.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\InputComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\MeshComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\MoveComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\SpriteComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Games\Asteroid\Astroid.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Asteroid\Laser.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Asteroid\Ship.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Camera.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\RendererSDL.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Timer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Window.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Utilitaire\Log.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Utilitaire\Random.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Maths\Matrix4.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Maths\Quaternion.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Maths\Vector2.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Maths\Vector3.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Maths\VertexArray.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Controls\InputManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Controls\KeyboardState.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Controls\MouseState.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\AssetsManager\Assets.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\AssetsManager\Texture.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\Actor.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\BackgroundSpriteComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\CircleCollisionComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\Component.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\InputComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\MeshComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\MoveComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\SpriteComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ILoading.h">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Astroid.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Enemy01.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Enemy02.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Enemy03.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Enemy04.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Enemy05.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Enemy06.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Farback01.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Farback02.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Laser.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship01.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship01-Origin.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship01-SpaceInvaders.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship02.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship03.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Ship04.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\ShipWithThrust.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Stars.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Textures\Cube.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Textures\Default.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Textures\HealthBar.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Textures\Plane.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Textures\Radar.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Res\Textures\Sphere.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Shaders\BasicMesh.frag" />
+    <None Include="Res\Shaders\BasicMesh.vert" />
+    <None Include="Res\Shaders\Phong.frag" />
+    <None Include="Res\Shaders\Phong.vert" />
+    <None Include="Res\Shaders\Sprite.frag" />
+    <None Include="Res\Shaders\Sprite.vert" />
+    <None Include="Res\Meshes\Cube.gpmesh" />
+    <None Include="Res\Meshes\Plane.gpmesh" />
+    <None Include="Res\Meshes\Sphere.gpmesh" />
+    <None Include="Res\Audio\Master Bank.bank" />
+    <None Include="Res\Audio\Master Bank.strings.bank" />
+  </ItemGroup>
+</Project>
