@@ -2,6 +2,7 @@
 #include "Utilitaire/Log.h"
 #include "Timer.h"
 
+
 bool Game::initialize(const char* windowName, int windowWidth, int windowHeight, Color backgroundColor)
 {
 	bool is_window_init = window.initialize(windowName, windowWidth, windowHeight);
@@ -49,16 +50,6 @@ void Game::close()
 {
 	window.close();
 	SDL_Quit();
-}
-
-int Game::getScreenWidth()
-{
-	return window.getWidth();
-}
-
-int Game::getScreenHeight()
-{
-	return window.getHeight();
 }
 
 KeyState Game::getKeyState(SDL_Scancode keyCode)
@@ -323,6 +314,16 @@ void Game::removeActor(Actor* actor)
 		std::iter_swap(iter, end(actors) - 1);
 		actors.pop_back();
 	}
+}
+
+int Game::getScreenWidth()
+{
+	return window.getWidth();
+}
+
+int Game::getScreenHeight()
+{
+	return window.getHeight();
 }
 
 void Game::render()

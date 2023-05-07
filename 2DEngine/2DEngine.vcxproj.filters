@@ -132,6 +132,9 @@
     <ClInclude Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\VelocityComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Games\Asteroid\Astroid.cpp">
@@ -246,6 +249,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\VelocityComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,7 +2,7 @@
 #include <vector>
 #include <Engine/Maths/Vector2.h>
 #include <Engine/Maths/Vector3.h>
-#include <SDL_stdinc.h>
+#include "SDL_stdinc.h"
 #include <Engine/Maths/Matrix4.h>
 #include <Engine/Maths/Quaternion.h>
 

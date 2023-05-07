@@ -3,7 +3,9 @@
 
 class Window
 {
+
 public:
+
 	Window() = default;
 	Window(const Window&) = delete;
 	Window& operator=(const Window&) = delete;
@@ -16,6 +18,7 @@ public:
 	int getHeight() const { return height; }
 
 private:
+
 	SDL_Window* SDLWindow{ nullptr };
 	int width{ 0 };
 	int height{ 0 };

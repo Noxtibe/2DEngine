@@ -173,6 +173,7 @@
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\TextComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\VelocityComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\CircleComponent.cpp" />
@@ -213,6 +214,7 @@
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.cpp" />
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\TextComponent.cpp" />
     <ClCompile Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\VelocityComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Astroid.png" />

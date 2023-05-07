@@ -18,8 +18,6 @@ public:
 	int getUpdateOrder() const { return updateOrder; }
 
 	virtual void update(float dt);
-	virtual void onUpdateWorldTransform() {}
-
 	virtual void debug(RendererSDL& renderer);
 
 protected:

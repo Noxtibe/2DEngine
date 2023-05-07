@@ -10,8 +10,10 @@
 #include "Maths/Vector2.h"
 #include "Maths/Quaternion.h"
 #include "AssetsManager/Texture.h"
+#include "AssetsManager/Font.h"
 #include <Engine/ActorsComponents/LoadComponent/LoadComponent.h>
 #include <Engine/ActorsComponents/LoadComponent/TextComponent.h>
+#include <Engine/ActorsComponents/CollisionComponents/ICollision.h>
 
 
 RendererSDL::RendererSDL() : SDLRenderer(nullptr)

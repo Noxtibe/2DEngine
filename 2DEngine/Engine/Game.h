@@ -79,7 +79,7 @@ private:
 	bool isRunning{ true };
 
 	bool debug{ false };
-	bool isUpdatingActors;
+	bool isUpdatingActors{ false };
 	vector<Actor*> actors;
 	vector<Actor*> pendingActors;
 

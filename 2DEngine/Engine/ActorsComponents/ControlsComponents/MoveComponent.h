@@ -1,30 +1,35 @@
 #pragma once
-#include "Component.h"
+#include <Engine/ActorsComponents/Component.h>
+#include <Engine/Maths/Vector2.h>
 
 class MoveComponent : public Component
 {
 
 public:
 
-	MoveComponent(Actor* ownerP, int updateOrder = 10); // By default, update before other components
-	MoveComponent() = delete;
+	MoveComponent(Actor* ownerP, int updateOrderP = 10) : Component(ownerP, updateOrderP) {}
+	MoveComponent() = delete; // By default, update before other components
 	MoveComponent(const MoveComponent&) = delete;
 	MoveComponent& operator=(const MoveComponent&) = delete;
 
-	float getForwardSpeed() const { return forwardSpeed; }
-	float getAngularSpeed() const { return angularSpeed; }
-	float getStrafeSpeed() const { return strafeSpeed; }
+	void rewindLastMovement(bool rewindX, bool rewindY);
+	Vector2 getCustomRewindPosition(bool xRewind, bool yRewind);
+	Vector2 getBeforeLastMovementPosition() const { return actorPosBeforeMovement; }
 
-	void setForwardSpeed(float forwardSpeedP);
-	void setAngularSpeed(float angularSpeedP);
-	void setStrafeSpeed(float strafeSpeedP);
+	void setActivateXMovement(bool activate);
+	bool getActivateXMovement() const { return activateXAxis; }
+	void setActivateYMovement(bool activate);
+	bool getActivateYMovement() const { return activateYAxis; }
 
-	void update(float dt) override;
+	virtual void stopXMovement();
+	virtual void stopYMovement();
+	virtual void reverseXMovement();
+	virtual void reverseYMovement();
 
+protected:
 
-private:
+	bool activateXAxis{ true };
+	bool activateYAxis{ true };
 
-	float forwardSpeed;
-	float angularSpeed;
-	float strafeSpeed;
+	Vector2 actorPosBeforeMovement{ Vector2::zero };
 };
