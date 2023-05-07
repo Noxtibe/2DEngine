@@ -1,45 +1,89 @@
 #include "Assets.h"
-#include <iostream>
-#include <sstream>
+#include "../Utilitaire/Log.h"
 #include <fstream>
-#include <Engine/Utilitaire/Log.h>
-#include <Engine/RendererSDL.h>
-#include <rapidjson/document.h>
+#include <iostream>
 
-std::map<std::string, Texture> Assets::textures;
+map<string, Texture> Assets::textures;
+map<string, Font*> Assets::fonts;
+map<string, Grid*> Assets::Grids;
+string Assets::assetsPath{ "" };
 
-Texture Assets::loadTexture(IRenderer& renderer, const string& filename, const string& name)
+void Assets::setAssetsPath(const string& path)
 {
-    textures[name] = loadTextureFromFile(renderer, filename.c_str());
-    return textures[name];
+	assetsPath = path;
+}
+
+Texture Assets::loadTexture(RendererSDL& renderer, const string& filename, const string& name)
+{
+	textures[name] = loadTextureFromFile(renderer, (assetsPath + filename).c_str());
+	return textures[name];
+}
+
+Font* Assets::loadFont(const string& filename, const string& name, int size)
+{
+	fonts[name] = loadFontFromFile((assetsPath + filename).c_str(), size);
+	return fonts[name];
+}
+
+Grid* Assets::loadGrid(const string& filename, const string& name)
+{
+	Grids[name] = loadGridFromFile((assetsPath + filename).c_str());
+	return Grids[name];
 }
 
 Texture& Assets::getTexture(const string& name)
 {
-    if (textures.find(name) == end(textures))
-    {
-        std::ostringstream loadError;
-        loadError << "Texture " << name << " does not exist in assets manager.";
-        Log::error(LogCategory::Application, loadError.str());
-    }
-    return textures[name];
+	if (textures.find(name) == end(textures))
+	{
+		Log::error(LogCategory::Application, "Texture " + name + " does not exist in assets manager.");
+	}
+	return textures[name];
+}
+
+Font* Assets::getFont(const string& name)
+{
+	if (fonts.find(name) == end(fonts))
+	{
+		Log::error(LogCategory::Application, "Font " + name + " does not exist in assets manager.");
+	}
+	return fonts[name];
+}
+
+Grid* Assets::getGrid(const string& name)
+{
+	if (Grids.find(name) == end(Grids) || Grids[name] == nullptr)
+	{
+		Log::error(LogCategory::Application, "Grid Map " + name + " does not exist in assets manager.");
+	}
+	return Grids[name];
 }
 
 void Assets::clear()
 {
-    // (Properly) delete all textures
-    for (auto iter : textures)
-        iter.second.unload();
-    textures.clear();
+	for (auto iter : textures)
+	{
+		iter.second.unload();
+	}
+	textures.clear();
+
+	fonts.clear();
 }
 
-Texture Assets::loadTextureFromFile(IRenderer& renderer, const string& filename)
+Texture Assets::loadTextureFromFile(RendererSDL& renderer, const string& filePath)
 {
-    Texture texture;
-    // Not very elegant, but simpler architecture
-    if (renderer.type() == IRenderer::Type::SDL)
-    {
-        //texture.loadSDL(dynamic_cast<RendererSDL&>(renderer), filename);
-    }
-    return texture;
+	Texture texture;
+	texture.loadSDL(renderer, filePath);
+	return texture;
+}
+
+Font* Assets::loadFontFromFile(const string& filePath, int size)
+{
+	Font font;
+	return font.load(filePath, size);
+}
+
+Grid* Assets::loadGridFromFile(const string& filePath)
+{
+	Grid grid_map;
+	return grid_map.load(filePath);
 }

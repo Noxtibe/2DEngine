@@ -2,33 +2,44 @@
 #include <map>
 #include <string>
 #include "Texture.h"
+#include "Font.h"
+#include "Grid.h"
 
 using std::map;
 using std::string;
 
-// A static singleton Assets class that hosts several
-// functions to load resources. Each loaded resource is also 
-// stored for future reference by string handles. All functions 
-// and resources are static and no public constructor is defined.
 class Assets
 {
+
 public:
 
-    static std::map<std::string, Texture> textures;
+	static map<string, Texture> textures;
+	static map<string, Font*> fonts;
+	static map<string, Grid*> Grids;
 
-    // Loads a texture from file
-    static Texture loadTexture(IRenderer& renderer, const string& filename, const string& name);
+	static void setAssetsPath(const string& path);
 
-    // Retrieves a stored texture
-    static Texture& getTexture(const std::string& name);
+	//  load an asset from file
+	static Texture loadTexture(RendererSDL& renderer, const string& filename, const string& name);
+	static Font* loadFont(const string& filename, const string& name, int size);
+	static Grid* loadGrid(const string& filename, const string& name);
 
-    // Properly de-allocates all loaded resources
-    static void clear();
+	//  retrieve a stored asset
+	static Texture& getTexture(const string& name);
+	static Font* getFont(const string& name);
+	static Grid* getGrid(const string& name);
+
+	//  properly de-allocates all loaded resources
+	static void clear();
 
 private:
-    Assets() {}
+	Assets() {}
 
-    // Loads a single texture from file
-    static Texture loadTextureFromFile(IRenderer& renderer, const string& filename);
+	//  load a single asset from file
+	static Texture loadTextureFromFile(RendererSDL& renderer, const string& filePath);
+	static Font* loadFontFromFile(const string& filePath, int size);
+	static Grid* loadGridFromFile(const string& filePath);
 
+	static string assetsPath;
 };
+

@@ -2,6 +2,7 @@
 #include <SDL_stdinc.h>
 
 class Actor;
+class RendererSDL;
 
 class Component
 {

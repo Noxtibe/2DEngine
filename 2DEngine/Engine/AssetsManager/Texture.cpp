@@ -43,6 +43,7 @@ bool Texture::loadSDL(RendererSDL& renderer, const string& filenameP)
 	Log::info("Loaded texture " + filename);
 	return true;
 }
+
 void Texture::updateInfo(int& widthOut, int& heightOut)
 {
 	widthOut = width;

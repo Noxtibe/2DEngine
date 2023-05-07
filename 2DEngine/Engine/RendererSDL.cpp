@@ -10,7 +10,8 @@
 #include "Maths/Vector2.h"
 #include "Maths/Quaternion.h"
 #include "AssetsManager/Texture.h"
-#include <Engine/ActorsComponents/LoadComponent.h>
+#include <Engine/ActorsComponents/LoadComponent/LoadComponent.h>
+#include <Engine/ActorsComponents/LoadComponent/TextComponent.h>
 
 
 RendererSDL::RendererSDL() : SDLRenderer(nullptr)
@@ -262,7 +263,7 @@ void RendererSDL::drawSprite(const Actor& actor, const Texture& tex, Rectangle s
 	delete src_SDL;
 }
 
-/*void RendererSDL::drawText(const Actor& actor, const class DrawTextComponent* text, int width, int height, Vector2 offset)
+void RendererSDL::drawText(const Actor& actor, const class TextComponent* text, int width, int height, Vector2 offset)
 {
 	Vector2 cam_pos = Game::instance().getCamera().getCamPos();
 	SDL_Rect dst_rect;
@@ -280,7 +281,7 @@ void RendererSDL::drawSprite(const Actor& actor, const Texture& tex, Rectangle s
 
 	SDL_RenderCopyEx(SDLRenderer, text->toSDLTexture(), src_SDL, &dst_rect, -Maths::toDegrees(rotation), nullptr, SDL_FLIP_NONE);
 	delete src_SDL;
-}*/
+}
 
 void RendererSDL::close()
 {

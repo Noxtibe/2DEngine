@@ -84,28 +84,22 @@
     <ClInclude Include="Engine\ActorsComponents\Actor.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\BackgroundSpriteComponent.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\CircleCollisionComponent.h">
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\CircleCollisionComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Engine\ActorsComponents\Component.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\InputComponent.h">
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\InputComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\MeshComponent.h">
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\MoveComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\MoveComponent.h">
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\SpriteComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\SpriteComponent.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\ActorsComponents\LoadComponent.h">
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\LoadComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Utilitaire\Color.h">
@@ -115,6 +109,27 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Maths\Vector2Int.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AssetsManager\Font.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AssetsManager\Grid.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\CircleComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\TextComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\ICollision.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -182,25 +197,19 @@
     <ClCompile Include="Engine\ActorsComponents\Actor.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\BackgroundSpriteComponent.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\CircleCollisionComponent.cpp">
+    <ClCompile Include="Engine\ActorsComponents\CollisionComponents\CircleCollisionComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\ActorsComponents\Component.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\InputComponent.cpp">
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\InputComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\MeshComponent.cpp">
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\MoveComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\MoveComponent.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\SpriteComponent.cpp">
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\SpriteComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -209,7 +218,7 @@
     <ClCompile Include="Engine\ILoading.h">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\ActorsComponents\LoadComponent.cpp">
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\LoadComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Utilitaire\Color.cpp">
@@ -219,6 +228,24 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Maths\Vector2Int.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\AssetsManager\Font.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\AssetsManager\Grid.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\CircleComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\TextComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

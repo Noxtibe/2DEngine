@@ -10,7 +10,7 @@ using std::vector;
 
 class Game;
 class Component;
-class Renderer;
+class RendererSDL;
 
 class Actor
 {

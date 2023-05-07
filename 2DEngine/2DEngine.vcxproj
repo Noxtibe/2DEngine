@@ -134,15 +134,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\ICollision.h" />
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\CircleComponent.h" />
     <ClInclude Include="Engine\Utilitaire\Color.h" />
     <ClInclude Include="Engine\ActorsComponents\Actor.h" />
-    <ClInclude Include="Engine\ActorsComponents\BackgroundSpriteComponent.h" />
-    <ClInclude Include="Engine\ActorsComponents\CircleCollisionComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\CircleCollisionComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\Component.h" />
-    <ClInclude Include="Engine\ActorsComponents\InputComponent.h" />
-    <ClInclude Include="Engine\ActorsComponents\MeshComponent.h" />
-    <ClInclude Include="Engine\ActorsComponents\MoveComponent.h" />
-    <ClInclude Include="Engine\ActorsComponents\SpriteComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\InputComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\MoveComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\SpriteComponent.h" />
     <ClInclude Include="Engine\AssetsManager\Assets.h" />
     <ClInclude Include="Engine\AssetsManager\Texture.h" />
     <ClInclude Include="Engine\Camera.h" />
@@ -162,23 +162,27 @@
     <ClInclude Include="Engine\Utilitaire\Log.h" />
     <ClInclude Include="Engine\Utilitaire\Random.h" />
     <ClInclude Include="Engine\Window.h" />
+    <ClInclude Include="Engine\AssetsManager\Font.h" />
     <ClInclude Include="Games\Asteroid\Astroid.h" />
     <ClInclude Include="Games\Asteroid\Laser.h" />
     <ClInclude Include="Games\Asteroid\Ship.h" />
-    <ClInclude Include="Engine\ActorsComponents\LoadComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\LoadComponent.h" />
     <ClInclude Include="Engine\Maths\Rectangle.h" />
     <ClInclude Include="Engine\Maths\Vector2Int.h" />
+    <ClInclude Include="Engine\AssetsManager\Grid.h" />
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\LoadComponent\TextComponent.h" />
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\CircleComponent.cpp" />
     <ClCompile Include="Engine\Utilitaire\Color.cpp" />
     <ClCompile Include="Engine\ActorsComponents\Actor.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\BackgroundSpriteComponent.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\CircleCollisionComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\CollisionComponents\CircleCollisionComponent.cpp" />
     <ClCompile Include="Engine\ActorsComponents\Component.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\InputComponent.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\MeshComponent.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\MoveComponent.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\SpriteComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\InputComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\MoveComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\SpriteComponent.cpp" />
     <ClCompile Include="Engine\AssetsManager\Assets.cpp" />
     <ClCompile Include="Engine\AssetsManager\Texture.cpp" />
     <ClCompile Include="Engine\Camera.cpp" />
@@ -197,13 +201,18 @@
     <ClCompile Include="Engine\Utilitaire\Log.cpp" />
     <ClCompile Include="Engine\Utilitaire\Random.cpp" />
     <ClCompile Include="Engine\Window.cpp" />
+    <ClCompile Include="Engine\AssetsManager\Font.cpp" />
     <ClCompile Include="Games\Asteroid\Astroid.cpp" />
     <ClCompile Include="Games\Asteroid\Laser.cpp" />
     <ClCompile Include="Games\Asteroid\Ship.cpp" />
-    <ClCompile Include="Engine\ActorsComponents\LoadComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\LoadComponent.cpp" />
+    <ClCompile Include="Engine\AssetsManager\Grid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Maths\Rectangle.cpp" />
     <ClCompile Include="Engine\Maths\Vector2Int.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\LoadComponent\TextComponent.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Astroid.png" />

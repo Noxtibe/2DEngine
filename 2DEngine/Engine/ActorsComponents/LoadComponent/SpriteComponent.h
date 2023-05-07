@@ -1,21 +1,21 @@
 #pragma once
-#include "Component.h"
+#include "LoadComponent.h"
 #include <Engine/AssetsManager/Texture.h>
-#include <Engine/IRenderer.h>
+#include <Engine/RendererSDL.h>
 
-class SpriteComponent : public Component
+class SpriteComponent : public LoadComponent
 {
 
 public:
 
-    SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100);
+    SpriteComponent(Actor* ownerP, Texture& textureP, Vector2 offsetP, RendererSDL::Flip spriteFlipP, int drawOrderP = 100);
     virtual ~SpriteComponent();
     SpriteComponent() = delete;
     SpriteComponent(const SpriteComponent&) = delete;
     SpriteComponent& operator=(const SpriteComponent&) = delete;
 
     virtual void setTexture(const Texture& textureP);
-    virtual void draw(IRenderer& renderer);
+    virtual void draw(RendererSDL& renderer);
 
     int getDrawOrder() const { return drawOrder; }
     int getTexWidth() const { return texWidth; }
@@ -27,5 +27,7 @@ protected:
     int drawOrder;
     int texWidth;
     int texHeight;
+    Vector2 offset{ Vector2::zero };
+    RendererSDL::Flip spriteFlip{ RendererSDL::Flip::None };
 };
 
