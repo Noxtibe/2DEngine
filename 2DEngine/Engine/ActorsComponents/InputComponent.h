@@ -13,14 +13,6 @@ public:
 	InputComponent(const InputComponent&) = delete;
 	InputComponent& operator=(const InputComponent&) = delete;
 
-	// Old controls system
-
-	//void processInput(const Uint8* keyState);
-	/*void setForwardKey(int key);
-	void setBackKey(int key);
-	void setClockwiseKey(int key);
-	void setCounterClockwiseKey(int key);*/
-
 	void processInput(const struct InputState& inputState);
 	void setForwardKey(SDL_Scancode key);
 	void setBackKey(SDL_Scancode key);
@@ -35,13 +27,6 @@ private:
 
 	float maxForwardSpeed;
 	float maxAngularSpeed;
-
-	// Old control system
-
-	/*int forwardKey;
-	int backKey;
-	int clockwiseKey;
-	int counterClockwiseKey;*/
 
 	SDL_Scancode forwardKey;
 	SDL_Scancode backKey;

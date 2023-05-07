@@ -5,7 +5,9 @@
 
 class SpriteComponent : public Component
 {
+
 public:
+
     SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100);
     virtual ~SpriteComponent();
     SpriteComponent() = delete;
@@ -20,6 +22,7 @@ public:
     int getTexHeight() const { return texHeight; }
 
 protected:
+
     Texture texture;
     int drawOrder;
     int texWidth;

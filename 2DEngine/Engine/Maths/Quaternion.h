@@ -1,7 +1,10 @@
 #pragma once
 #include "Vector3.h"
+
 class Quaternion
+
 {
+
 public:
 	float x;
 	float y;
@@ -34,6 +37,40 @@ public:
 	float length() const
 	{
 		return Maths::sqrt(lengthSq());
+	}
+
+
+	/*
+	* Don't work actually, better not use it
+	*/
+	Vector3 getEulerAngles()
+	{
+		Vector3 retVal;
+		double test = x * y + z * w;
+
+		if (test > 0.499) //  north pole singularity
+		{
+			retVal.y = 2.0f * Maths::atan2(x, w);
+			retVal.z = Maths::pi / 2.0f;
+			retVal.x = 0.0f;
+			return retVal;
+		}
+
+		if (test < -0.499) //  south pole singularity
+		{
+			retVal.y = -(2.0f * Maths::atan2(x, w));
+			retVal.z = -(Maths::pi / 2.0f);
+			retVal.x = 0.0f;
+			return retVal;
+		}
+
+		double sqx = x * x;
+		double sqy = y * y;
+		double sqz = z * z;
+		retVal.y = Maths::atan2(2.0f * y * w - 2.0f * x * z, 1.0f - 2.0f * sqy - 2.0f * sqz);
+		//retVal.z = Maths::asin(2.0f * test);
+		retVal.x = Maths::atan2(2.0f * x * w - 2.0f * y * z, 1.0f - 2.0f * sqx - 2.0f * sqz);
+		return retVal;
 	}
 
 	// Normalize the provided quaternion
@@ -127,3 +164,4 @@ public:
 
 	static const Quaternion identity;
 };
+

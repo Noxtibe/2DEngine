@@ -4,13 +4,7 @@
 #include "Component.h"
 #include <Engine/Maths/Maths.h>
 
-Actor::Actor() :
-	state(Actor::ActorState::Active),
-	position(Vector3::zero),
-	scale(1.0f),
-	rotation(Quaternion::identity),
-	mustRecomputeWorldTransform(true),
-	game(Game::instance())
+Actor::Actor() : game(Game::instance())
 {
 	game.addActor(this);
 }
@@ -44,88 +38,21 @@ void Actor::setRotation(Quaternion rotationP)
 	mustRecomputeWorldTransform = true;
 }
 
-void Actor::setState(ActorState stateP)
+void Actor::set2DRotation(float rotation2DP)
 {
-	state = stateP;
-}
-
-Vector3 Actor::getForward() const
-{
-	return Vector3::transform(Vector3::unitX, rotation);
-}
-
-Vector3 Actor::getRight() const
-{
-	return Vector3::transform(Vector3::unitY, rotation);
-}
-
-void Actor::computeWorldTransform()
-{
-	if (mustRecomputeWorldTransform)
-	{
-		mustRecomputeWorldTransform = false;
-		worldTransform = Matrix4::createScale(scale);
-		worldTransform *= Matrix4::createFromQuaternion(rotation);
-		worldTransform *= Matrix4::createTranslation(position);
-
-		for (auto component : components)
-		{
-			component->onUpdateWorldTransform();
-		}
-	}
-}
-
-void Actor::rotate(const Vector3& axis, float angle)
-{
-	Quaternion newRotation = rotation;
-	Quaternion increment(axis, angle);
-	newRotation = Quaternion::concatenate(newRotation, increment);
-	setRotation(newRotation);
-}
-
-//Old controls system
-
-/*void Actor::processInput(const Uint8* keyState)
-{
-	if (state == Actor::ActorState::Active)
-	{
-		for (auto component : components)
-		{
-			component->processInput(keyState);
-		}
-		actorInput(keyState);
-	}
-}
-
-void Actor::actorInput(const Uint8* keyState)
-{
-}*/
-
-void Actor::processInput(const struct InputState& inputState)
-{
-	if (state == Actor::ActorState::Active)
-	{
-		for (auto component : components)
-		{
-			component->processInput(inputState);
-		}
-		actorInput(inputState);
-	}
-}
-
-void Actor::actorInput(const struct InputState& inputState)
-{
-
+	rotation2D = rotation2DP;
+	Quaternion newRotation(Vector3::unitZ, rotation2D);
+	rotation = newRotation;
+	mustRecomputeWorldTransform = true;
 }
 
 void Actor::update(float dt)
 {
 	if (state == Actor::ActorState::Active)
 	{
-		computeWorldTransform();
 		updateComponents(dt);
 		updateActor(dt);
-		computeWorldTransform();
+		updateTransformMatrix();
 	}
 }
 
@@ -137,8 +64,26 @@ void Actor::updateComponents(float dt)
 	}
 }
 
+void Actor::debugComponents(RendererSDL& renderer)
+{
+	for (auto component : components)
+	{
+		component->debug(renderer);
+	}
+}
+
 void Actor::updateActor(float dt)
 {
+}
+
+void Actor::updateTransformMatrix()
+{
+	if (!mustRecomputeWorldTransform) return;
+
+	mustRecomputeWorldTransform = false;
+	worldTransform = Matrix4::createScale(scale);
+	worldTransform *= Matrix4::createFromQuaternion(rotation);
+	worldTransform *= Matrix4::createTranslation(position);
 }
 
 void Actor::addComponent(Component* component)
@@ -166,4 +111,14 @@ void Actor::removeComponent(Component* component)
 	{
 		components.erase(iter);
 	}
+}
+
+Vector3 Actor::getForward() const
+{
+	return Vector3::transform(Vector3::unitX, rotation);
+}
+
+Vector3 Actor::getRight() const
+{
+	return Vector3::transform(Vector3::unitY, rotation);
 }

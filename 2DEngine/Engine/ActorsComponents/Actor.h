@@ -4,13 +4,17 @@
 #include <Engine/Maths/Vector3.h>
 #include <SDL_stdinc.h>
 #include <Engine/Maths/Matrix4.h>
+#include <Engine/Maths/Quaternion.h>
+
 using std::vector;
 
 class Game;
 class Component;
+class Renderer;
 
 class Actor
 {
+
 public:
 
 	enum class ActorState
@@ -28,36 +32,33 @@ public:
 	const Vector3 getPosition() const { return position; }
 	const float getScale() const { return scale; }
 	const Quaternion getRotation() const { return rotation; }
-	const Matrix4& getWorldTransform() const { return worldTransform; }
+	const float get2DRotation() const { return rotation2D; }
+	Vector3 getForward() const;
+	Vector3 getRight() const;
 
 	void setPosition(Vector3 positionP);
 	void setScale(float scaleP);
 	void setRotation(Quaternion rotationP);
-	void setState(ActorState stateP);
+	void set2DRotation(float rotation2DP);
 
-	Vector3 getForward() const;
-	Vector3 getRight() const;
-	void computeWorldTransform();
-	void rotate(const Vector3& axis, float angle);
-
-	//void processInput(const Uint8* keyState);
-	//virtual void actorInput(const Uint8* keyState);
-	void processInput(const struct InputState& inputState);
-	virtual void actorInput(const struct InputState& inputState);
 	void update(float dt);
 	void updateComponents(float dt);
+	void debugComponents(RendererSDL& renderer);
 	virtual void updateActor(float dt);
+	void updateTransformMatrix();
 	void addComponent(Component* component);
 	void removeComponent(Component* component);
 
 private:
+
 	Game& game;
-	ActorState state;
-	Vector3 position;
-	float scale;
-	Quaternion rotation;
+	ActorState state{ ActorState::Active };
+	Vector3 position{ Vector3::zero };
+	float scale{ 1.0f };
+	Quaternion rotation{ Quaternion::identity };
+	float rotation2D{ 0.0f };
 	Matrix4 worldTransform;
-	bool mustRecomputeWorldTransform;
+	bool mustRecomputeWorldTransform{ true };
 
 	vector<Component*> components;
 };

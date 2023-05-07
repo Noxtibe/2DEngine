@@ -1,19 +1,27 @@
 #pragma once
+#include <string>
+
 struct Vector2
 {
-	Vector2() : x(0), y(0) {}
-	Vector2(float xP, float yP) : x(xP), y(yP) {}
+	float x{ 0.0f };
+	float y{ 0.0f };
 
-	float x;
-	float y;
 	static const Vector2 zero;
 	static const Vector2 unitX;
 	static const Vector2 unitY;
+
+	Vector2() = default;
+	Vector2(float xP, float yP) : x{ xP }, y{ yP } {}
+	Vector2(const class Vector3 vec3);
+	Vector2(const class Vector2Int vec2Int);
 
 	void set(float xP, float yP);
 	float lengthSq() const;
 	float length() const;
 	void normalize();
+	void clamp(const Vector2& min, const Vector2& max);
+	void clampMagnitude(float magnitude);
+
 
 	static Vector2 normalize(const Vector2& vec)
 	{
@@ -32,16 +40,32 @@ struct Vector2
 		return Vector2(a + f * (b - a));
 	}
 
+
+	friend Vector2 operator+(const Vector2& left, const Vector2& right)
+	{
+		return { left.x + right.x, left.y + right.y };
+	}
+
+	friend Vector2 operator-(const Vector2& left, const Vector2& right)
+	{
+		return { left.x - right.x, left.y - right.y };
+	}
+
+	friend Vector2 operator*(const Vector2& vec, float scalar)
+	{
+		return { vec.x * scalar, vec.y * scalar };
+	}
+
+	friend Vector2 operator*(float scalar, const Vector2& vec)
+	{
+		return { vec.x * scalar, vec.y * scalar };
+	}
+
 	Vector2& operator+=(const Vector2& right)
 	{
 		x += right.x;
 		y += right.y;
 		return *this;
-	}
-
-	friend Vector2 operator+(const Vector2& left, const Vector2& right)
-	{
-		return Vector2(left.x + right.x, left.y + right.y);
 	}
 
 	Vector2& operator-=(const Vector2& right)
@@ -51,11 +75,6 @@ struct Vector2
 		return *this;
 	}
 
-	friend Vector2 operator-(const Vector2& left, const Vector2& right)
-	{
-		return Vector2(left.x - right.x, left.y - right.y);
-	}
-
 	Vector2& operator*=(float scalar)
 	{
 		x *= scalar;
@@ -63,13 +82,13 @@ struct Vector2
 		return *this;
 	}
 
-	friend Vector2 operator*(const Vector2& vec, float scalar)
+	Vector2 operator-() const
 	{
-		return Vector2(vec.x * scalar, vec.y * scalar);
+		return Vector2(-x, -y);
 	}
 
-	friend Vector2 operator*(float scalar, const Vector2& vec)
+	std::string toString() const
 	{
-		return Vector2(vec.x * scalar, vec.y * scalar);
+		return std::to_string(x) + "  " + std::to_string(y) + " \n";
 	}
 };

@@ -2,6 +2,7 @@
 #include <memory.h>
 #include "Vector3.h"
 #include "Quaternion.h"
+#include <string>
 
 class Matrix4
 {
@@ -167,6 +168,20 @@ public:
 		retVal.y = Vector3(mat[1][0], mat[1][1], mat[1][2]).length();
 		retVal.z = Vector3(mat[2][0], mat[2][1], mat[2][2]).length();
 		return retVal;
+	}
+
+	std::string toString() const
+	{
+		std::string str = "";
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 4; j++)
+			{
+				str += std::to_string(mat[i][j]) + " ";
+			}
+			str += "\n";
+		}
+		return str;
 	}
 
 	static Matrix4 createScale(float xScale, float yScale, float zScale)

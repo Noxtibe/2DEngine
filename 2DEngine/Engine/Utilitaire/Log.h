@@ -2,7 +2,6 @@
 #include <string>
 #include <SDL_log.h>
 
-// specifier à la main chaque namespace pour eviter des pb pour les gors programme
 using std::string;
 
 enum class LogCategory
@@ -20,11 +19,11 @@ enum class LogCategory
 
 class Log
 {
+
 public:
+
 	Log() = delete;
 	~Log() = delete;
-	//Log(const Log&) = delete;
-	// Delete l'operateur d'attribution
 	Log& operator = (const Log&) = delete;
 
 	static void info(const string& message);
