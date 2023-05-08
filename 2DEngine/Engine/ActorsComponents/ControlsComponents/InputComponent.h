@@ -1,6 +1,5 @@
 #pragma once
 #include "VelocityComponent.h"
-#include <SDL_stdinc.h>
 #include <SDL_scancode.h>
 
 class InputComponent : public VelocityComponent
@@ -20,17 +19,18 @@ public:
 	void setBackKey(SDL_Scancode key);
 	void setRightKey(SDL_Scancode key);
 	void setLeftKey(SDL_Scancode key);
-	void setClockwiseKey(SDL_Scancode key);
-	void setCounterClockwiseKey(SDL_Scancode key);
+	//void setClockwiseKey(SDL_Scancode key);
+	//void setCounterClockwiseKey(SDL_Scancode key);
 
 	
 
-private:
+protected:
 
 	SDL_Scancode forwardKey{ SDL_SCANCODE_W };
 	SDL_Scancode backKey{ SDL_SCANCODE_S };
 	SDL_Scancode rightKey{ SDL_SCANCODE_D };
 	SDL_Scancode leftKey{ SDL_SCANCODE_A };
-	SDL_Scancode clockwiseKey;
-	SDL_Scancode counterClockwiseKey;
+
+	//SDL_Scancode clockwiseKey;
+	//SDL_Scancode counterClockwiseKey;
 };

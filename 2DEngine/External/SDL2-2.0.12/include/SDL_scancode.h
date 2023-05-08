@@ -404,8 +404,13 @@ typedef enum
 
     /* Add any other keys here. */
 
-    SDL_NUM_SCANCODES = 512 /**< not a key, just marks the number of scancodes
+    SDL_NUM_SCANCODES = 512, /**< not a key, just marks the number of scancodes
                                  for array bounds */
+
+     SDL_MOUSE_LEFT_BUTTON = 1000,
+     SDL_MOUSE_MIDDLE_BUTTON = 1001,
+     SDL_MOUSE_RIGHT_BUTTON = 1002
+
 } SDL_Scancode;
 
 #endif /* SDL_scancode_h_ */

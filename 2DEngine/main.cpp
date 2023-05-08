@@ -1,7 +1,7 @@
-
+#include "Games/RTS/Main.h"
 
 int main(int argc, char** argv)
 {
-    //launch();
+    launch();
     return 0;
 }

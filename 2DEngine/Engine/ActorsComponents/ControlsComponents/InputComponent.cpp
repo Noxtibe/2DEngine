@@ -1,5 +1,4 @@
 #include "InputComponent.h"
-#include <SDL_scancode.h>
 #include <Engine/Game.h>
 #include <Engine/Maths/Maths.h>
 
@@ -63,12 +62,12 @@ void InputComponent::setLeftKey(SDL_Scancode key)
 	leftKey = key;
 }
 
-void InputComponent::setClockwiseKey(SDL_Scancode key)
+/*void InputComponent::setClockwiseKey(SDL_Scancode key)
 {
 	clockwiseKey = key;
-}
+}*/
 
-void InputComponent::setCounterClockwiseKey(SDL_Scancode key)
+/*void InputComponent::setCounterClockwiseKey(SDL_Scancode key)
 {
 	counterClockwiseKey = key;
-}
+}*/

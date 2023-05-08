@@ -158,76 +158,76 @@ void Game::processInput()
 
 	if ((mouse_state & 1) == 1) //  left mouse button is currently down
 	{
-		if (keys.find(SDL_MOUSE_LEFT) == keys.end())
+		if (keys.find(SDL_MOUSE_LEFT_BUTTON) == keys.end())
 		{
-			keys.emplace(SDL_MOUSE_LEFT, KeyState::Pressed);
-			pendingKeys.push_back(SDL_MOUSE_LEFT);
+			keys.emplace(SDL_MOUSE_LEFT_BUTTON, KeyState::Pressed);
+			pendingKeys.push_back(SDL_MOUSE_LEFT_BUTTON);
 		}
 		else
 		{
-			if (keys[SDL_MOUSE_LEFT] != KeyState::Down)
+			if (keys[SDL_MOUSE_LEFT_BUTTON] != KeyState::Down)
 			{
-				keys[SDL_MOUSE_LEFT] = KeyState::Pressed;
-				pendingKeys.push_back(SDL_MOUSE_LEFT);
+				keys[SDL_MOUSE_LEFT_BUTTON] = KeyState::Pressed;
+				pendingKeys.push_back(SDL_MOUSE_LEFT_BUTTON);
 			}
 		}
 	}
 	else //  left mouse button is currently up
 	{
-		if (keys[SDL_MOUSE_LEFT] != KeyState::Up)
+		if (keys[SDL_MOUSE_LEFT_BUTTON] != KeyState::Up)
 		{
-			keys[SDL_MOUSE_LEFT] = KeyState::Released;
-			pendingKeys.push_back(SDL_MOUSE_LEFT);
+			keys[SDL_MOUSE_LEFT_BUTTON] = KeyState::Released;
+			pendingKeys.push_back(SDL_MOUSE_LEFT_BUTTON);
 		}
 	}
 
 	if ((mouse_state & 2) == 2) //  middle mouse button is currently down
 	{
-		if (keys.find(SDL_MOUSE_MIDDLE) == keys.end())
+		if (keys.find(SDL_MOUSE_MIDDLE_BUTTON) == keys.end())
 		{
-			keys.emplace(SDL_MOUSE_MIDDLE, KeyState::Pressed);
-			pendingKeys.push_back(SDL_MOUSE_MIDDLE);
+			keys.emplace(SDL_MOUSE_MIDDLE_BUTTON, KeyState::Pressed);
+			pendingKeys.push_back(SDL_MOUSE_MIDDLE_BUTTON);
 		}
 		else
 		{
-			if (keys[SDL_MOUSE_MIDDLE] != KeyState::Down)
+			if (keys[SDL_MOUSE_MIDDLE_BUTTON] != KeyState::Down)
 			{
-				keys[SDL_MOUSE_MIDDLE] = KeyState::Pressed;
-				pendingKeys.push_back(SDL_MOUSE_MIDDLE);
+				keys[SDL_MOUSE_MIDDLE_BUTTON] = KeyState::Pressed;
+				pendingKeys.push_back(SDL_MOUSE_MIDDLE_BUTTON);
 			}
 		}
 	}
 	else //  middle mouse button is currently up
 	{
-		if (keys[SDL_MOUSE_MIDDLE] != KeyState::Up)
+		if (keys[SDL_MOUSE_MIDDLE_BUTTON] != KeyState::Up)
 		{
-			keys[SDL_MOUSE_MIDDLE] = KeyState::Released;
-			pendingKeys.push_back(SDL_MOUSE_MIDDLE);
+			keys[SDL_MOUSE_MIDDLE_BUTTON] = KeyState::Released;
+			pendingKeys.push_back(SDL_MOUSE_MIDDLE_BUTTON);
 		}
 	}
 
 	if ((mouse_state & 4) == 4) //  right mouse button is currently down
 	{
-		if (keys.find(SDL_MOUSE_RIGHT) == keys.end())
+		if (keys.find(SDL_MOUSE_RIGHT_BUTTON) == keys.end())
 		{
-			keys.emplace(SDL_MOUSE_RIGHT, KeyState::Pressed);
-			pendingKeys.push_back(SDL_MOUSE_RIGHT);
+			keys.emplace(SDL_MOUSE_RIGHT_BUTTON, KeyState::Pressed);
+			pendingKeys.push_back(SDL_MOUSE_RIGHT_BUTTON);
 		}
 		else
 		{
-			if (keys[SDL_MOUSE_RIGHT] != KeyState::Down)
+			if (keys[SDL_MOUSE_RIGHT_BUTTON] != KeyState::Down)
 			{
-				keys[SDL_MOUSE_RIGHT] = KeyState::Pressed;
-				pendingKeys.push_back(SDL_MOUSE_RIGHT);
+				keys[SDL_MOUSE_RIGHT_BUTTON] = KeyState::Pressed;
+				pendingKeys.push_back(SDL_MOUSE_RIGHT_BUTTON);
 			}
 		}
 	}
 	else //  right mouse button is currently up
 	{
-		if (keys[SDL_MOUSE_RIGHT] != KeyState::Up)
+		if (keys[SDL_MOUSE_RIGHT_BUTTON] != KeyState::Up)
 		{
-			keys[SDL_MOUSE_RIGHT] = KeyState::Released;
-			pendingKeys.push_back(SDL_MOUSE_RIGHT);
+			keys[SDL_MOUSE_RIGHT_BUTTON] = KeyState::Released;
+			pendingKeys.push_back(SDL_MOUSE_RIGHT_BUTTON);
 		}
 	}
 
