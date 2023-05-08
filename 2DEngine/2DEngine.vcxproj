@@ -146,9 +146,6 @@
     <ClInclude Include="Engine\AssetsManager\Assets.h" />
     <ClInclude Include="Engine\AssetsManager\Texture.h" />
     <ClInclude Include="Engine\Camera.h" />
-    <ClInclude Include="Engine\Controls\InputManager.h" />
-    <ClInclude Include="Engine\Controls\KeyboardState.h" />
-    <ClInclude Include="Engine\Controls\MouseState.h" />
     <ClInclude Include="Engine\Game.h" />
     <ClInclude Include="Engine\IRenderer.h" />
     <ClInclude Include="Engine\Maths\Maths.h" />
@@ -193,9 +190,6 @@
     <ClCompile Include="Engine\AssetsManager\Assets.cpp" />
     <ClCompile Include="Engine\AssetsManager\Texture.cpp" />
     <ClCompile Include="Engine\Camera.cpp" />
-    <ClCompile Include="Engine\Controls\InputManager.cpp" />
-    <ClCompile Include="Engine\Controls\KeyboardState.cpp" />
-    <ClCompile Include="Engine\Controls\MouseState.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
     <ClCompile Include="Engine\ILoading.h" />
     <ClCompile Include="Engine\Maths\Matrix4.cpp" />
@@ -215,6 +209,7 @@
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\LoadComponent.cpp" />
     <ClCompile Include="Engine\AssetsManager\Grid.cpp" />
     <ClCompile Include="Engine\ActorsComponents\GridComponent\GridComponent.cpp" />
+    <ClCompile Include="Games\RTS\RTSMain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Maths\Rectangle.cpp" />
     <ClCompile Include="Engine\Maths\Vector2Int.cpp" />

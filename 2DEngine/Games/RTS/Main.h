@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include <Engine/Game.h>
 #include "RTSGame.h"
 
@@ -15,4 +15,4 @@ void launch()
 	}
 
 	game.close();
-}
+}*/
