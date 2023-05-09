@@ -5,7 +5,7 @@
 void launch()
 {
 	auto& game = Game::instance();
-	bool is_game_init = game.initialize("RTS", 1920, 1080, Color::black);
+	bool is_game_init = game.initialize("RTS", 1600, 800, Color::black);
 
 	if(is_game_init)
 	{

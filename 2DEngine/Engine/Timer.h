@@ -1,11 +1,14 @@
 #pragma once
+
+constexpr static unsigned int FPS = 60;
+constexpr static unsigned int FRAME_DELAY = 1000 / FPS;
+
 class Timer
 {
 
 public:
 
-
-	Timer();
+	Timer() = default;
 	Timer(const Timer&) = delete;
 	Timer& operator=(const Timer&) = delete;
 
@@ -18,16 +21,14 @@ public:
 
 private:
 
-	const static unsigned int FPS = 60;
-	const static unsigned int FRAME_DELAY = 1000 / FPS;
 	const unsigned int MAX_DT = 50;
 
 	// Time in milliseconds when frame starts
-	unsigned int frameStart;
+	unsigned int frameStart{ 0 };
 
 	// Last frame start time in milliseconds
-	unsigned int lastFrame;
+	unsigned int lastFrame{ 0 };
 
 	// Time it tooks to run the loop. Used to cap framerate.
-	unsigned int frameTime;
+	unsigned int frameTime{ 0 };
 };

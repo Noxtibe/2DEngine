@@ -4,7 +4,7 @@
 #include <Engine/Game.h>
 #include <Engine/Utilitaire/Log.h>
 
-CircleCollisionComponent::CircleCollisionComponent(Actor* ownerP) : Component(ownerP)
+CircleCollisionComponent::CircleCollisionComponent(Actor* ownerP, bool debugEnabledP) : Component(ownerP)
 {
 }
 
@@ -82,4 +82,30 @@ float CircleCollisionComponent::nearestXPosOfX(const float x) const
 	{
 		return x - getRadius();
 	}
+}
+
+void CircleCollisionComponent::debug(RendererSDL& renderer)
+{
+	if (!debugEnabled) return;
+
+	Vector2 screen_mouse_pos = owner.getGame().getMousePosition();
+
+	Vector2 mouse_pos = Vector2{
+		screen_mouse_pos.x + owner.getGame().getCamera().getCamPos().x,
+		screen_mouse_pos.y + owner.getGame().getCamera().getCamPos().y
+	};
+
+	if (intersectWithPoint(mouse_pos))
+	{
+		drawDebug(renderer, Color::white);
+	}
+	else
+	{
+		drawDebug(renderer, Color::grey);
+	}
+}
+
+void CircleCollisionComponent::drawDebug(RendererSDL& renderer, Color debugColor)
+{
+	renderer.drawDebugCircle(owner, offset, radius, debugColor);
 }

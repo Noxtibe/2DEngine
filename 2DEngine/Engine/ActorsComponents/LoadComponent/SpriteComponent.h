@@ -15,16 +15,15 @@ public:
     SpriteComponent& operator=(const SpriteComponent&) = delete;
 
     virtual void setTexture(const Texture& textureP);
-    virtual void draw(RendererSDL& renderer);
+    virtual void setFlip(RendererSDL::Flip spriteFlipP);
+    virtual void draw(RendererSDL& renderer) override;
 
-    int getDrawOrder() const { return drawOrder; }
     int getTexWidth() const { return texWidth; }
     int getTexHeight() const { return texHeight; }
 
 protected:
 
     Texture texture;
-    int drawOrder;
     int texWidth;
     int texHeight;
     Vector2 offset{ Vector2::zero };

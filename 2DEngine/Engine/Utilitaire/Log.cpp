@@ -1,4 +1,5 @@
 #include "Log.h"
+#include <SDL_log.h>
 #include <SDL_error.h>
 
 void Log::info(const string& message)

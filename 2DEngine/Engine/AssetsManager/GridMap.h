@@ -5,24 +5,25 @@
 using std::string;
 using std::vector;
 
-class Grid
+class GridMap
 {
 
 public:
 
-	Grid(string pathP, int mapWidthP, int mapHeightP, vector<int> GridP);
-	Grid() = default;
-	static Grid* load(const string& pathP);
+	GridMap(string pathP, int mapWidthP, int mapHeightP, vector<int> gridMapP);
+	GridMap() = default;
+	static GridMap* load(const string& pathP);
 
 	string getPath() const { return path; }
 	int getWidth() const { return mapWidth; }
 	int getHeight() const { return mapHeight; }
-	vector<int> getMap() const { return GridMap; }
+	vector<int> getMap() const { return gridMap; }
 
 private:
 
 	string path{ "" };
 	int mapWidth{ 0 };
 	int mapHeight{ 0 };
-	vector<int> GridMap;
+	vector<int> gridMap;
 };
+

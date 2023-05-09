@@ -16,7 +16,7 @@ public:
 
 	virtual void setRect(const Rectangle rectP);
 	virtual void setColor(const Color colorP);
-	virtual void draw(RendererSDL& renderer);
+	virtual void draw(RendererSDL& renderer) override;
 
 	Rectangle getRect() const { return rect; }
 	Color getColor() const { return color; }

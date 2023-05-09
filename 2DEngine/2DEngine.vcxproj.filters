@@ -63,9 +63,6 @@
     <ClInclude Include="Engine\Maths\Vector3.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Maths\VertexArray.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\AssetsManager\Assets.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -105,9 +102,6 @@
     <ClInclude Include="Engine\AssetsManager\Font.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\AssetsManager\Grid.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -141,7 +135,64 @@
     <ClInclude Include="Engine\ActorsComponents\GridComponent\GridComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Games\RTS\RTSGrid.h">
+    <ClInclude Include="Engine\AssetsManager\GridMap.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\RTS\Grid.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\GridComponent\LoadGridTile.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\GridComponent\GridTileRectangle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\GridComponent\GridTileSprite.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\DestinationComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\Main.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\PongGame.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\AC\Paddle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\AC\PlayerPaddle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\AC\Ball.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\AC\GameManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Pong\AC\IAPaddle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\BorderLimitComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\BricksBreaker\Main.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\BricksBreaker\BricksBreakerGame.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\BricksBreaker\AC\BBBall.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\BricksBreaker\AC\BBGrid.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\BricksBreaker\AC\BBPaddle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\BricksBreaker\AC\BBManager.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -186,9 +237,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Maths\Vector3.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Maths\VertexArray.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\AssetsManager\Assets.cpp">
@@ -236,9 +284,6 @@
     <ClCompile Include="Engine\AssetsManager\Font.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\AssetsManager\Grid.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -266,10 +311,58 @@
     <ClCompile Include="Engine\ActorsComponents\GridComponent\GridComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Games\RTS\RTSGrid.cpp">
+    <ClCompile Include="Engine\AssetsManager\GridMap.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Games\RTS\RTSMain.cpp">
+    <ClCompile Include="Games\RTS\Grid.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\GridComponent\LoadGridTile.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\GridComponent\GridTileRectangle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\GridComponent\GridTileSprite.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\DestinationComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Pong\PongGame.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Pong\AC\Paddle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Pong\AC\PlayerPaddle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Pong\AC\Ball.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Pong\AC\GameManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Pong\AC\IAPaddle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ActorsComponents\CollisionComponents\BorderLimitComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\BricksBreaker\BricksBreakerGame.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\BricksBreaker\AC\BBBall.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\BricksBreaker\AC\BBGrid.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\BricksBreaker\AC\BBPaddle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\BricksBreaker\AC\BBManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

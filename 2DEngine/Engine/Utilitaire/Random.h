@@ -1,10 +1,11 @@
 #pragma once
 #include <random>
-#include <Engine/Maths/Vector2.h>
+#include <../Maths/Vector2.h>
 
 class Random
 {
 public:
+
 	static void init();
 
 	// Seed the generator with the specified int
@@ -22,6 +23,8 @@ public:
 
 	// Get a random vector given the min/max bounds
 	static Vector2 getVector(const Vector2& min, const Vector2& max);
+
 private:
+
 	static std::mt19937 sGenerator;
 };

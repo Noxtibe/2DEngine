@@ -5,7 +5,7 @@
 #include <Engine/Utilitaire/Log.h>
 #include <Engine/Maths/Maths.h>
 
-RectangleCollisionComponent::RectangleCollisionComponent(Actor* ownerP) : Component(ownerP)
+RectangleCollisionComponent::RectangleCollisionComponent(Actor* ownerP, bool debugEnabledP) : Component(ownerP)
 {
 }
 
@@ -103,4 +103,30 @@ float RectangleCollisionComponent::nearestXPosOfX(const float x) const
 	{
 		return x - rectangle.x - scaled_rect.width;
 	}
+}
+
+void RectangleCollisionComponent::debug(RendererSDL& renderer)
+{
+	if (!debugEnabled) return;
+
+	Vector2 screen_mouse_pos = owner.getGame().getMousePosition();
+
+	Vector2 mouse_pos = Vector2{
+		screen_mouse_pos.x + owner.getGame().getCamera().getCamPos().x,
+		screen_mouse_pos.y + owner.getGame().getCamera().getCamPos().y
+	};
+
+	if (intersectWithPoint(mouse_pos))
+	{
+		drawDebug(renderer, Color::white);
+	}
+	else
+	{
+		drawDebug(renderer, Color::grey);
+	}
+}
+
+void RectangleCollisionComponent::drawDebug(RendererSDL& renderer, Color debugColor)
+{
+	renderer.drawDebugRect(owner, rectangle, debugColor);
 }

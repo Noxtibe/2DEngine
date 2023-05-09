@@ -9,7 +9,7 @@ class RectangleCollisionComponent : public Component, public ICollision
 
 public:
 
-	RectangleCollisionComponent(Actor* ownerP);
+	RectangleCollisionComponent(Actor* ownerP, bool debugEnabledP = true);
 	RectangleCollisionComponent() = delete;
 	RectangleCollisionComponent(const RectangleCollisionComponent&) = delete;
 	RectangleCollisionComponent& operator=(const RectangleCollisionComponent&) = delete;
@@ -28,6 +28,9 @@ public:
 
 	float nearestYPosOfY(const float y) const override;
 	float nearestXPosOfX(const float x) const override;
+
+	void debug(RendererSDL& renderer) override;
+	void drawDebug(RendererSDL& renderer, Color debugColor) override;
 
 private:
 

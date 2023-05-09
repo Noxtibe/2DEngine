@@ -1,13 +1,13 @@
-#include "Grid.h"
+#include "GridMap.h"
 #include "../Utilitaire/Log.h"
 #include <fstream>
 #include <iostream>
 
-Grid::Grid(string pathP, int mapWidthP, int mapHeightP, vector<int> GridP) : path(pathP), mapWidth(mapWidthP), mapHeight(mapHeightP), GridMap(GridP)
+GridMap::GridMap(string pathP, int mapWidthP, int mapHeightP, vector<int> gridMapP) : path(pathP), mapWidth(mapWidthP), mapHeight(mapHeightP), gridMap(gridMapP)
 {
 }
 
-Grid* Grid::load(const string& pathP)
+GridMap* GridMap::load(const string& pathP)
 {
 	vector<int> grid_map;
 	int grid_map_width = 0;
@@ -37,9 +37,15 @@ Grid* Grid::load(const string& pathP)
 					for (int i = 0; i < grid_map_width; i++)
 					{
 						string value = values;
-						value.erase(value.begin() + 1, value.end());
+						int chars_to_keep = 0;
+						for (auto iter : value)
+						{
+							if (iter == ',') break;
+							chars_to_keep++;
+						}
+						value.erase(value.begin() + chars_to_keep, value.end());
 						grid_map.push_back(std::stoi(value));
-						values.erase(0, 3);
+						values.erase(0, 2 + chars_to_keep);
 					}
 
 					data_lines_read++;
@@ -88,5 +94,5 @@ Grid* Grid::load(const string& pathP)
 	}
 
 	Log::info("Loaded grid map " + pathP);
-	return new Grid(pathP, grid_map_width, grid_map_height, grid_map);
+	return new GridMap(pathP, grid_map_width, grid_map_height, grid_map);
 }

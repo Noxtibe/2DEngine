@@ -5,7 +5,7 @@
 
 map<string, Texture> Assets::textures;
 map<string, Font*> Assets::fonts;
-map<string, Grid*> Assets::Grids;
+map<string, GridMap*> Assets::gridMaps;
 string Assets::assetsPath{ "" };
 
 void Assets::setAssetsPath(const string& path)
@@ -25,10 +25,10 @@ Font* Assets::loadFont(const string& filename, const string& name, int size)
 	return fonts[name];
 }
 
-Grid* Assets::loadGrid(const string& filename, const string& name)
+GridMap* Assets::loadGridMap(const string& filename, const string& name)
 {
-	Grids[name] = loadGridFromFile((assetsPath + filename).c_str());
-	return Grids[name];
+	gridMaps[name] = loadGridMapFromFile((assetsPath + filename).c_str());
+	return gridMaps[name];
 }
 
 Texture& Assets::getTexture(const string& name)
@@ -49,13 +49,13 @@ Font* Assets::getFont(const string& name)
 	return fonts[name];
 }
 
-Grid* Assets::getGrid(const string& name)
+GridMap* Assets::getGridMap(const string& name)
 {
-	if (Grids.find(name) == end(Grids) || Grids[name] == nullptr)
+	if (gridMaps.find(name) == end(gridMaps) || gridMaps[name] == nullptr)
 	{
-		Log::error(LogCategory::Application, "Grid Map " + name + " does not exist in assets manager.");
+		Log::error(LogCategory::Application, "GridMap Map " + name + " does not exist in assets manager.");
 	}
-	return Grids[name];
+	return gridMaps[name];
 }
 
 void Assets::clear()
@@ -82,8 +82,8 @@ Font* Assets::loadFontFromFile(const string& filePath, int size)
 	return font.load(filePath, size);
 }
 
-Grid* Assets::loadGridFromFile(const string& filePath)
+GridMap* Assets::loadGridMapFromFile(const string& filePath)
 {
-	Grid grid_map;
-	return grid_map.load(filePath);
+	GridMap GridMap_map;
+	return GridMap_map.load(filePath);
 }

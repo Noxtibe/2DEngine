@@ -13,7 +13,7 @@ public:
 	LoadComponent(const LoadComponent&) = delete;
 	LoadComponent& operator=(const LoadComponent&) = delete;
 
-	virtual void load(RendererSDL& renderer);
+	virtual void draw(RendererSDL& renderer);
 
 	int getLoadOrder() const { return loadOrder; }
 

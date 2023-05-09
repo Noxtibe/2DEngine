@@ -19,5 +19,11 @@ public:
 
 	virtual float nearestYPosOfY(const float y) const = 0;
 	virtual float nearestXPosOfX(const float x) const = 0;
+
+	virtual void drawDebug(RendererSDL& renderer, Color debugColor) = 0;
+
+protected:
+
+	bool debugEnabled;
 };
 

@@ -11,9 +11,9 @@
 #include "Maths/Quaternion.h"
 #include "AssetsManager/Texture.h"
 #include "AssetsManager/Font.h"
-#include <Engine/ActorsComponents/LoadComponent/LoadComponent.h>
-#include <Engine/ActorsComponents/LoadComponent/TextComponent.h>
-#include <Engine/ActorsComponents/CollisionComponents/ICollision.h>
+#include <LoadComponent/LoadComponent.h>
+#include <LoadComponent/TextComponent.h>
+#include <CollisionComponents/ICollision.h>
 
 
 RendererSDL::RendererSDL() : SDLRenderer(nullptr)
@@ -71,7 +71,7 @@ void RendererSDL::loadLoadComponents()
 {
 	for (auto draw_component : LoadComponents)
 	{
-		draw_component->load(*this);
+		draw_component->draw(*this);
 	}
 }
 

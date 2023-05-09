@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include <Engine/ILoading.h>
 
 class RTSGame : public ILoading
@@ -10,5 +10,5 @@ public:
 	RTSGame& operator=(const RTSGame&) = delete;
 
 	void load(Game* game) override;
-};
+};*/
 

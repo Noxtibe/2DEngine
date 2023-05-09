@@ -12,7 +12,7 @@ LoadComponent::~LoadComponent()
 	owner.getGame().getRenderer().removeLoadComponent(this);
 }
 
-void LoadComponent::load(RendererSDL& renderer)
+void LoadComponent::draw(RendererSDL& renderer)
 {
 }
 

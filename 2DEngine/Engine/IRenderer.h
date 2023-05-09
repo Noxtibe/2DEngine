@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "Window.h"
 #include <Engine/Maths/Vector2.h>
 
@@ -24,4 +24,4 @@ public:
 	virtual IRenderer::Type type() = 0;
 
 	virtual void drawSprite(const class Actor& actor, const class Texture& tex, struct Rectangle srcRect, Vector2 origin, Flip flip) const = 0;
-};
+};*/

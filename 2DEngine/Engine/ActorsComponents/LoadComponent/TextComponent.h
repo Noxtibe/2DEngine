@@ -20,7 +20,7 @@ public:
 	virtual void recalculateSDLTexture();
 	virtual void setFont(Font* fontP);
 	virtual void setText(const string textP);
-	virtual void draw(RendererSDL& renderer) ;
+	virtual void draw(RendererSDL& renderer) override;
 
 	void setCentered(bool centeredP);
 	Vector2 getRealOffset();

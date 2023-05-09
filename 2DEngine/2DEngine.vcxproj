@@ -134,6 +134,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Games\BricksBreaker\AC\BBManager.h" />
+    <ClInclude Include="Games\BricksBreaker\AC\BBPaddle.h" />
+    <ClInclude Include="Games\BricksBreaker\AC\BBGrid.h" />
+    <ClInclude Include="Games\BricksBreaker\AC\BBBall.h" />
+    <ClInclude Include="Games\BricksBreaker\BricksBreakerGame.h" />
+    <ClInclude Include="Engine\ActorsComponents\CollisionComponents\BorderLimitComponent.h" />
+    <ClInclude Include="Games\BricksBreaker\Main.h" />
+    <ClInclude Include="Games\Pong\AC\GameManager.h" />
+    <ClInclude Include="Games\Pong\AC\Ball.h" />
+    <ClInclude Include="Engine\ActorsComponents\ControlsComponents\DestinationComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\CollisionComponents\ICollision.h" />
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\CircleComponent.h" />
     <ClInclude Include="Engine\Utilitaire\Color.h" />
@@ -153,7 +163,6 @@
     <ClInclude Include="Engine\Maths\Quaternion.h" />
     <ClInclude Include="Engine\Maths\Vector2.h" />
     <ClInclude Include="Engine\Maths\Vector3.h" />
-    <ClInclude Include="Engine\Maths\VertexArray.h" />
     <ClInclude Include="Engine\RendererSDL.h" />
     <ClInclude Include="Engine\Timer.h" />
     <ClInclude Include="Engine\Utilitaire\Log.h" />
@@ -166,19 +175,36 @@
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\LoadComponent.h" />
     <ClInclude Include="Engine\Maths\Rectangle.h" />
     <ClInclude Include="Engine\Maths\Vector2Int.h" />
-    <ClInclude Include="Engine\AssetsManager\Grid.h" />
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\RectangleComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\LoadComponent\TextComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\CollisionComponents\RectangleCollisionComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\ControlsComponents\VelocityComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\ControlsComponents\MouseComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\ControlsComponents\RotationComponent.h" />
+    <ClInclude Include="Games\Pong\Main.h" />
     <ClInclude Include="Games\RTS\Main.h" />
     <ClInclude Include="Games\RTS\RTSGame.h" />
     <ClInclude Include="Engine\ActorsComponents\GridComponent\GridComponent.h" />
-    <ClInclude Include="Games\RTS\RTSGrid.h" />
+    <ClInclude Include="Engine\AssetsManager\GridMap.h" />
+    <ClInclude Include="Games\RTS\Grid.h" />
+    <ClInclude Include="Engine\ActorsComponents\GridComponent\LoadGridTile.h" />
+    <ClInclude Include="Engine\ActorsComponents\GridComponent\GridTileRectangle.h" />
+    <ClInclude Include="Engine\ActorsComponents\GridComponent\GridTileSprite.h" />
+    <ClInclude Include="Games\Pong\PongGame.h" />
+    <ClInclude Include="Games\Pong\AC\Paddle.h" />
+    <ClInclude Include="Games\Pong\AC\PlayerPaddle.h" />
+    <ClInclude Include="Games\Pong\AC\IAPaddle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Games\BricksBreaker\AC\BBManager.cpp" />
+    <ClCompile Include="Games\BricksBreaker\AC\BBPaddle.cpp" />
+    <ClCompile Include="Games\BricksBreaker\AC\BBGrid.cpp" />
+    <ClCompile Include="Games\BricksBreaker\AC\BBBall.cpp" />
+    <ClCompile Include="Games\BricksBreaker\BricksBreakerGame.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\CollisionComponents\BorderLimitComponent.cpp" />
+    <ClCompile Include="Games\Pong\AC\GameManager.cpp" />
+    <ClCompile Include="Games\Pong\AC\Ball.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\ControlsComponents\DestinationComponent.cpp" />
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\CircleComponent.cpp" />
     <ClCompile Include="Engine\Utilitaire\Color.cpp" />
     <ClCompile Include="Engine\ActorsComponents\Actor.cpp" />
@@ -196,7 +222,6 @@
     <ClCompile Include="Engine\Maths\Quaternion.cpp" />
     <ClCompile Include="Engine\Maths\Vector2.cpp" />
     <ClCompile Include="Engine\Maths\Vector3.cpp" />
-    <ClCompile Include="Engine\Maths\VertexArray.cpp" />
     <ClCompile Include="Engine\RendererSDL.cpp" />
     <ClCompile Include="Engine\Timer.cpp" />
     <ClCompile Include="Engine\Utilitaire\Log.cpp" />
@@ -207,9 +232,13 @@
     <ClCompile Include="Games\Asteroid\Laser.cpp" />
     <ClCompile Include="Games\Asteroid\Ship.cpp" />
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\LoadComponent.cpp" />
-    <ClCompile Include="Engine\AssetsManager\Grid.cpp" />
     <ClCompile Include="Engine\ActorsComponents\GridComponent\GridComponent.cpp" />
-    <ClCompile Include="Games\RTS\RTSMain.cpp" />
+    <ClCompile Include="Engine\AssetsManager\GridMap.cpp" />
+    <ClCompile Include="Games\RTS\Grid.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\GridComponent\LoadGridTile.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\GridComponent\GridTileRectangle.cpp" />
+    <ClCompile Include="Engine\ActorsComponents\GridComponent\GridTileSprite.cpp" />
+    <ClCompile Include="Games\Pong\AC\IAPaddle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Maths\Rectangle.cpp" />
     <ClCompile Include="Engine\Maths\Vector2Int.cpp" />
@@ -220,7 +249,9 @@
     <ClCompile Include="Engine\ActorsComponents\ControlsComponents\MouseComponent.cpp" />
     <ClCompile Include="Engine\ActorsComponents\ControlsComponents\RotationComponent.cpp" />
     <ClCompile Include="Games\RTS\RTSGame.cpp" />
-    <ClCompile Include="Games\RTS\RTSGrid.cpp" />
+    <ClCompile Include="Games\Pong\PongGame.cpp" />
+    <ClCompile Include="Games\Pong\AC\Paddle.cpp" />
+    <ClCompile Include="Games\Pong\AC\PlayerPaddle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Astroid.png" />

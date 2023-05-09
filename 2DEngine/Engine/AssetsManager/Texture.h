@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <Engine/RendererSDL.h>
+#include <../RendererSDL.h>
 
 using std::string;
 
@@ -18,12 +18,11 @@ public:
 	SDL_Texture* toSDLTexture() const { return SDLTexture; }
 	void updateInfo(int& widthOut, int& heightOut);
 
-	inline int getWidth() const { return width; }
-	inline int getHeight() const { return height; }
+	int getWidth() const { return width; }
+	int getHeight() const { return height; }
 
 private:
 
-	unsigned int textureID;
 	string filename{ "" };
 	SDL_Texture* SDLTexture{ nullptr };
 	int width{ 0 };

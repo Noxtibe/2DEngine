@@ -8,7 +8,7 @@ class CircleCollisionComponent : public Component, public ICollision
 
 public:
 
-	CircleCollisionComponent(Actor* ownerP);
+	CircleCollisionComponent(Actor* ownerP, bool debugEnabledP = true);
 	CircleCollisionComponent() = delete;
 	CircleCollisionComponent(const CircleCollisionComponent&) = delete;
 	CircleCollisionComponent& operator=(const CircleCollisionComponent&) = delete;
@@ -28,6 +28,9 @@ public:
 
 	float nearestYPosOfY(const float y) const override;
 	float nearestXPosOfX(const float x) const override;
+
+	void debug(RendererSDL& renderer) override;
+	void drawDebug(RendererSDL& renderer, Color debugColor) override;
 
 private:
 

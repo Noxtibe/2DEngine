@@ -1,17 +1,17 @@
-#include "RTSGrid.h"
+/*#include "grid.h"
 
-RTSGrid::RTSGrid(int width, int height, int cellSize) 
+Grid::Grid(int width, int height, int cellSize) 
 {
     m_width = width;
     m_height = height;
     m_cellSize = cellSize;
 }
 
-RTSGrid::~RTSGrid() 
+Grid::~Grid() 
 {
 }
 
-void RTSGrid::draw(SDL_Renderer* renderer) 
+void Grid::draw(SDL_Renderer* renderer) 
 {
     // Dessiner les lignes verticales
     for (int i = 0; i <= m_width; i++) 
@@ -23,4 +23,4 @@ void RTSGrid::draw(SDL_Renderer* renderer)
     {
         SDL_RenderDrawLine(renderer, 0, i * m_cellSize, m_width * m_cellSize, i * m_cellSize);
     }
-}
+}*/
