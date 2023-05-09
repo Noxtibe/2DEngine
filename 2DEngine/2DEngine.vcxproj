@@ -182,6 +182,7 @@
     <ClInclude Include="Engine\ActorsComponents\ControlsComponents\MouseComponent.h" />
     <ClInclude Include="Engine\ActorsComponents\ControlsComponents\RotationComponent.h" />
     <ClInclude Include="Games\Pong\Main.h" />
+    <ClInclude Include="Games\Racing\Main.h" />
     <ClInclude Include="Games\RTS\Main.h" />
     <ClInclude Include="Games\RTS\RTSGame.h" />
     <ClInclude Include="Engine\ActorsComponents\GridComponent\GridComponent.h" />
@@ -194,6 +195,10 @@
     <ClInclude Include="Games\Pong\AC\Paddle.h" />
     <ClInclude Include="Games\Pong\AC\PlayerPaddle.h" />
     <ClInclude Include="Games\Pong\AC\IAPaddle.h" />
+    <ClInclude Include="Games\Racing\RacingGame.h" />
+    <ClInclude Include="Games\Racing\AC\PlayerCar.h" />
+    <ClInclude Include="Games\Racing\AC\RCManager.h" />
+    <ClInclude Include="Games\Racing\AC\RCTrack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Games\BricksBreaker\AC\BBManager.cpp" />
@@ -252,6 +257,10 @@
     <ClCompile Include="Games\Pong\PongGame.cpp" />
     <ClCompile Include="Games\Pong\AC\Paddle.cpp" />
     <ClCompile Include="Games\Pong\AC\PlayerPaddle.cpp" />
+    <ClCompile Include="Games\Racing\RacingGame.cpp" />
+    <ClCompile Include="Games\Racing\AC\PlayerCar.cpp" />
+    <ClCompile Include="Games\Racing\AC\RCManager.cpp" />
+    <ClCompile Include="Games\Racing\AC\RCTrack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Astroid.png" />
