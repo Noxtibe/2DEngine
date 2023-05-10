@@ -183,11 +183,11 @@
     <ClInclude Include="Engine\ActorsComponents\ControlsComponents\RotationComponent.h" />
     <ClInclude Include="Games\Pong\Main.h" />
     <ClInclude Include="Games\Racing\Main.h" />
+    <ClInclude Include="Games\RTS\AC\ITurn.h" />
     <ClInclude Include="Games\RTS\Main.h" />
     <ClInclude Include="Games\RTS\RTSGame.h" />
     <ClInclude Include="Engine\ActorsComponents\GridComponent\GridComponent.h" />
     <ClInclude Include="Engine\AssetsManager\GridMap.h" />
-    <ClInclude Include="Games\RTS\Grid.h" />
     <ClInclude Include="Engine\ActorsComponents\GridComponent\LoadGridTile.h" />
     <ClInclude Include="Engine\ActorsComponents\GridComponent\GridTileRectangle.h" />
     <ClInclude Include="Engine\ActorsComponents\GridComponent\GridTileSprite.h" />
@@ -199,6 +199,10 @@
     <ClInclude Include="Games\Racing\AC\PlayerCar.h" />
     <ClInclude Include="Games\Racing\AC\RCManager.h" />
     <ClInclude Include="Games\Racing\AC\RCTrack.h" />
+    <ClInclude Include="Games\RTS\AC\RTSPlayerTurn.h" />
+    <ClInclude Include="Games\RTS\AC\RTSManager.h" />
+    <ClInclude Include="Games\RTS\AC\RTSMap.h" />
+    <ClInclude Include="Games\RTS\AC\RTSCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Games\BricksBreaker\AC\BBManager.cpp" />
@@ -239,7 +243,6 @@
     <ClCompile Include="Engine\ActorsComponents\LoadComponent\LoadComponent.cpp" />
     <ClCompile Include="Engine\ActorsComponents\GridComponent\GridComponent.cpp" />
     <ClCompile Include="Engine\AssetsManager\GridMap.cpp" />
-    <ClCompile Include="Games\RTS\Grid.cpp" />
     <ClCompile Include="Engine\ActorsComponents\GridComponent\LoadGridTile.cpp" />
     <ClCompile Include="Engine\ActorsComponents\GridComponent\GridTileRectangle.cpp" />
     <ClCompile Include="Engine\ActorsComponents\GridComponent\GridTileSprite.cpp" />
@@ -261,6 +264,10 @@
     <ClCompile Include="Games\Racing\AC\PlayerCar.cpp" />
     <ClCompile Include="Games\Racing\AC\RCManager.cpp" />
     <ClCompile Include="Games\Racing\AC\RCTrack.cpp" />
+    <ClCompile Include="Games\RTS\AC\RTSPlayerTurn.cpp" />
+    <ClCompile Include="Games\RTS\AC\RTSManager.cpp" />
+    <ClCompile Include="Games\RTS\AC\RTSMap.cpp" />
+    <ClCompile Include="Games\RTS\AC\RTSCamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Astroid.png" />

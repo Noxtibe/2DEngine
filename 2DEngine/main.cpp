@@ -1,4 +1,4 @@
-#include "Games/Racing/Main.h"
+#include "Games/RTS/Main.h"
 
 int main(int argc, char** argv)
 {
