@@ -134,6 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Algo\AStar.h" />
     <ClInclude Include="Games\BricksBreaker\AC\BBManager.h" />
     <ClInclude Include="Games\BricksBreaker\AC\BBPaddle.h" />
     <ClInclude Include="Games\BricksBreaker\AC\BBGrid.h" />
@@ -203,8 +204,10 @@
     <ClInclude Include="Games\RTS\AC\RTSManager.h" />
     <ClInclude Include="Games\RTS\AC\RTSMap.h" />
     <ClInclude Include="Games\RTS\AC\RTSCamera.h" />
+    <ClInclude Include="Games\RTS\AC\RTSInput.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Algo\AStar.cpp" />
     <ClCompile Include="Games\BricksBreaker\AC\BBManager.cpp" />
     <ClCompile Include="Games\BricksBreaker\AC\BBPaddle.cpp" />
     <ClCompile Include="Games\BricksBreaker\AC\BBGrid.cpp" />
@@ -268,6 +271,7 @@
     <ClCompile Include="Games\RTS\AC\RTSManager.cpp" />
     <ClCompile Include="Games\RTS\AC\RTSMap.cpp" />
     <ClCompile Include="Games\RTS\AC\RTSCamera.cpp" />
+    <ClCompile Include="Games\RTS\AC\RTSInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Astroid.png" />

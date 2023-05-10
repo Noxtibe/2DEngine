@@ -222,6 +222,12 @@
     <ClInclude Include="Games\RTS\AC\ITurn.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Games\RTS\AC\RTSInput.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\AStar.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Games\Asteroid\Astroid.cpp">
@@ -411,6 +417,12 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Games\RTS\AC\RTSCamera.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\RTS\AC\RTSInput.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\AStar.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
