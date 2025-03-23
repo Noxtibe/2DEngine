@@ -1,2 +1,2 @@
 # 2DEngine
- A 2D Engine with several games
+ A 2D Engine with several games like asteroid, pong, racing...
